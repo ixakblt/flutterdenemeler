@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ilkproje/gridViewkullanimi.dart';
+import 'package:ilkproje/boxdecoraitonkullanimi.dart';
 // import 'package:ilkproje/alertkullanimi.dart';
 // import 'package:ilkproje/carddeneme.dart';
 // import 'package:ilkproje/listix.dart';
