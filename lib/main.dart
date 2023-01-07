@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ilkproje/listbuilderkullanim.dart';
+import 'package:ilkproje/alertkullanimi.dart';
+
 // import 'package:ilkproje/carddeneme.dart';
 // import 'package:ilkproje/listix.dart';
 // import 'package:ilkproje/menu2.dart';
 // import 'package:ilkproje/menuler.dart';
 // import 'package:ilkproje/scrollistem.dart';
+// import 'package:ilkproje/listbuilderkullanim.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          body: listbuilderdeneme(),
+          body: alertdeneme(),
           appBar: AppBar(
             centerTitle: true,
             title: Text('seasdlamalr'),
