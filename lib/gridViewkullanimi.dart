@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget kutucuk() {
   return Container(
-    color: Colors.amber.shade600,
+    color: Colors.teal.shade300,
     alignment: Alignment.center,
     child: Text(
       'ixix',
@@ -18,7 +18,24 @@ class gridViewkullanimi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return GridView.builder(
+      itemCount: 55,
+      gridDelegate:
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+      itemBuilder: (context, index) {
+        return kutucuk();
+      },
+    );
+  }
+
+  GridView normalgird() {
     return GridView.count(
+      /*
+   GridView.extent farklı olarak  
+   maxCrossAxisExtent kullanilmali ve crossAxisCountsilinir
+  ------------- 
+
+    */
       scrollDirection: Axis.horizontal, //yatayda sıralamak için
       crossAxisCount: 3,
       crossAxisSpacing: 10,
