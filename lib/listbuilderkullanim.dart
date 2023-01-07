@@ -2,35 +2,26 @@ import 'package:flutter/material.dart';
 
 class listbuilderdeneme extends StatelessWidget {
   List<Ogrenci> ogrenciler = List.generate(
-      500, (index) => Ogrenci(index, 'selam denem  $index', 'knk'));
+      500, (index) => Ogrenci(index, 'selam  ${index + 1}', 'knk'));
+
   listbuilderdeneme({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: ogrenciler
-            .map(
-              (Ogrenci ogr) => ListTile(
-                leading: CircleAvatar(
-                  child: Text(ogr.id.toString()),
-                ),
-                title: Text(ogr.isim),
-                subtitle: Text(ogr.soyadi),
+    return Container(
+      child: ListView.builder(
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(
+                ogrenciler[index].isim.toString(),
               ),
-            )
-            .toList(),
-      ),
-    );
-  }
-
-  Widget kart() {
-    return Card(
-      child: ListTile(
-        leading: CircleAvatar(
-          child: Icon(Icons.abc_rounded),
-        ),
-      ),
+              leading: CircleAvatar(
+                child: Icon(Icons.add),
+              ),
+              subtitle: Text(ogrenciler[index].soyadi.toString()),
+            );
+          },
+          itemCount: ogrenciler.length),
     );
   }
 }
@@ -56,3 +47,31 @@ class Ogrenci {
 //         .toList(),
 //   );
 // }
+
+  // SingleChildScrollView singlevelet() {
+  //   return SingleChildScrollView(
+  //   child: Column(
+  //     children: ogrenciler
+  //         .map(
+  //           (Ogrenci ogr) => ListTile(
+  //             leading: CircleAvatar(
+  //               child: Text(ogr.id.toString()),
+  //             ),
+  //             title: Text(ogr.isim),
+  //             subtitle: Text(ogr.soyadi),
+  //           ),
+  //         )
+  //         .toList(),
+  //   ),
+  // );
+  // }
+
+  // Widget kart() {
+  //   return Card(
+  //     child: ListTile(
+  //       leading: CircleAvatar(
+  //         child: Icon(Icons.abc_rounded),
+  //       ),
+  //     ),
+  //   );
+  // }
