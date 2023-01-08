@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ilkproje/boxdecoraitonkullanimi.dart';
+import 'package:ilkproje/customscrool1.dart';
+import 'package:ilkproje/gestureDetectorkullanim.dart';
+// import 'package:ilkproje/boxdecoraitonkullanimi.dart';
 // import 'package:ilkproje/alertkullanimi.dart';
 // import 'package:ilkproje/carddeneme.dart';
 // import 'package:ilkproje/listix.dart';
@@ -25,11 +27,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          body: gridViewkullanimi(),
-          appBar: AppBar(
-            centerTitle: true,
-            title: Text('seasdlamalr'),
-          )),
+        body: customscrool1(),
+        // appBar: AppBar(
+        //   centerTitle: true,
+        //   title: Text('seasdlamalr'),
+        // ),
+      ),
     );
   }
 }
